@@ -11,7 +11,7 @@ const connection = new MySQLConnector({
 const db = new Database(connection);
 
 class Movies extends Model {
-  static table = "moveis";
+  static table = "movies";
   static timestamps = true;
 
   static fields = {
@@ -23,11 +23,15 @@ class Movies extends Model {
 
 db.link([Movies]);
 
-await db.sync({ drop: true });
+await db.sync({ drop: false });
 
 await Movies.create({
   title: 'deno_db_title',
   published_at: '2022-01-03 00:00:00'
 });
+
+const allMovies = await Movies.all();
+
+console.log(allMovies);
 
 await db.close();
