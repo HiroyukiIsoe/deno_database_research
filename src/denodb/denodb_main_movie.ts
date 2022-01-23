@@ -30,8 +30,10 @@ await Movies.create({
   published_at: '2022-01-03 00:00:00'
 });
 
-const allMovies = await Movies.all();
+const allMovies: Model[] = await Movies.all();
 
-console.log(allMovies);
+allMovies.forEach(movie => {
+  console.log(movie.id);
+});
 
 await db.close();

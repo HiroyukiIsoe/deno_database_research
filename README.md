@@ -17,3 +17,9 @@ deno run -A --unstable https://deno.land/x/nessie/cli.ts make:seed add_movies
 deno run -A --unstable https://deno.land/x/nessie/cli.ts seed
 deno run -A --unstable https://deno.land/x/nessie/cli.ts seed seed_file.js
 ```
+
+## denodb 検証事項
+
+- 基本操作
+- Transaction
+- Index
