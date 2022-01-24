@@ -36,4 +36,10 @@ allMovies.forEach(movie => {
   console.log(movie.id);
 });
 
+await Movies.where('title', 'deno_db_title').delete();
+
+// const movie_count = Movies.count();
+
+// console.log(movie_count);
+
 await db.close();
