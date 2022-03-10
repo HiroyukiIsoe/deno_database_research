@@ -18,8 +18,17 @@ deno run -A --unstable https://deno.land/x/nessie/cli.ts seed
 deno run -A --unstable https://deno.land/x/nessie/cli.ts seed seed_file.js
 ```
 
+### 調査事項
+
+- [ ] DB接続情報を環境変数から取得する
+- [ ] マイグレーション実行にSQLビルダーライブラリを組み合わせる
+
 ## denodb 検証事項
 
 - 基本操作
 - Transaction
 - Index
+
+## mysqlの導入
+
+導入はあり
